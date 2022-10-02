@@ -1,0 +1,162 @@
+/* Basic CSS reset */
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+.page__body {
+    font-family: Verdana, Geneva, sans-serif;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* ------------------------------------------------
+MOBILE FIRST STYLE AND LAYOUT
+------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------
+HEADER AND NAVIGATION
+------------------------------------------------ */
+.search_form {
+    display: none;
+}
+
+.logo_style {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------
+ARTICLE SECTION
+------------------------------------------------ */
+.article_detail {
+    margin-bottom: 30px;
+}
+
+.article_img {
+    float: right;
+    height: 150px;
+}
+
+.article_header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.article_text {
+    font-size: 0.9rem;
+}
+
+
+/* ------------------------------------------------
+BACKLINK BUTTON
+------------------------------------------------ */
+.backlink {
+    display: block; /* margin top og bottom virker ikke på inline elements, så vi laver block */
+    margin: 15px 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #333333;
+}
+
+
+
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------ */
+.page_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25rem;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+    padding-top: 25px;
+}
+
+.some_img {
+    width: 32px;
+    margin-right: 16px;
+}
+
+.footer_card_header {
+    margin-bottom: 7px;
+}
+
+.footer_card:first-child .footer_card_header {
+    margin-bottom: 16px;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* ------------------------------------------------
+MEDIA QUERY
+------------------------------------------------ */
+
+@media only screen and (min-width: 900px) {
+
+    .search_form {
+        display: flex;
+    }
+
+    .search_field {
+        height: 27px;
+        margin-left: 25px;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        border: 1px solid rgba(51, 51, 51, 0.4);
+    }
+
+    .article_detail {
+        margin: 0 auto;
+        max-width: 60rem;
+    }
+
+    .article_header {
+        text-align: left;
+    }
+
+    .article_text {
+        float: left;
+        width: 35rem;
+        margin-bottom: 30px;
+    }
+
+    .article_img {
+        height: 250px;
+    }
+
+    .page_footer {
+        clear: both; /* da både tekst og billede er float, står footeren oveni. Dette får den tilbage på plads */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 10rem;
+    }
+
+    .footer_card {
+        width: 13rem;
+    }
+}

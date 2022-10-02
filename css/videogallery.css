@@ -1,0 +1,163 @@
+/* Basic CSS reset */
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+.page__body {
+    font-family: Verdana, Geneva, sans-serif;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* ------------------------------------------------
+MOBILE FIRST STYLE AND LAYOUT
+------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------
+HEADER AND NAVIGATION
+------------------------------------------------ */
+.search_form {
+    display: none;
+}
+
+.gallery_search_input {
+    border: 1px solid black;
+    padding: 5px;
+    width: 100%;
+}
+
+.gallery_search_form {
+    margin-bottom: 20px;
+}
+
+.logo_style {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------
+VIDEO SECTION
+------------------------------------------------ */
+.video_section {
+    margin: 30px 0px;
+}
+
+.video_inner_section {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.video_inner_flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.video_thumbnail {
+    max-width: 100%;
+}
+
+.card {
+    margin-bottom: 25px;
+}
+
+
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------ */
+.page_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25rem;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+    padding-top: 25px;
+}
+
+.some_img {
+    width: 32px;
+    margin-right: 16px;
+}
+
+.footer_card_header {
+    margin-bottom: 7px;
+}
+
+.footer_card:first-child .footer_card_header {
+    margin-bottom: 16px;
+}
+
+.section_header {
+    margin-bottom: 15px;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* ------------------------------------------------
+MEDIA QUERY
+------------------------------------------------ */
+
+
+@media only screen and (min-width: 900px) {
+
+    .video_inner_flexbox {
+        flex-direction: row;
+        flex-wrap: wrap; /* hvis der ikke er plads til kortene (videoerne) skal de gå ned på næste linje */
+        justify-content: flex-start; /* flexboksen skal starte i mest muligt til venstre position */
+    }
+
+    .video_thumbnail {
+        height: 150px;
+    }
+
+    .gallery_search_input {
+        width: 50%;
+    }
+
+    .card {
+        width: 15rem;
+        margin-right: 25px;
+    }
+
+    .search_field {
+        height: 27px;
+        margin-left: 25px;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        border: 1px solid rgba(51, 51, 51, 0.4);
+    }
+
+    .page_footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 10rem;
+    }
+
+    .footer_card {
+        width: 13rem;
+    }
+}

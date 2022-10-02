@@ -1,0 +1,335 @@
+/* Basic CSS reset */
+*,
+:after,
+:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+.page__body {
+    font-family: Verdana, Geneva, sans-serif;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+/* ------------------------------------------------
+MOBILE FIRST STYLE AND LAYOUT
+------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------
+HEADER AND NAVIGATION
+------------------------------------------------ */
+.search_form {
+    display: none;
+}
+
+.mobile_search_form {
+    display: flex;
+}
+
+.mobile_search_input {
+    border: 1px solid black;
+    padding: 5px;
+    width: 98%;
+}
+
+.logo_style {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5rem;
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* ------------------------------------------------
+GUIDE SECTION
+------------------------------------------------ */
+.guide_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px auto;
+    padding: 0 10px;
+    width: 100%;
+    height: 14.5rem;
+    border: 1px solid rgba(34, 56, 178, 0.31);
+}
+
+.guide_header {
+    width: 18rem;
+}
+
+.guide_img {
+    height: 100px;
+}
+
+.guide_link {
+    padding-top: 10px;
+    text-align: center;
+    height: 40px;
+    width: 140px;
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* ------------------------------------------------
+EDITORIAL ARTICLE
+------------------------------------------------ */
+.editorial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse; /* omvender rækkefølgen på children */
+    margin: 10px auto 30px;
+}
+
+.editorial_card {
+    text-align: center;
+    padding: 85px;
+    background-color: rgba(34, 56, 178, 0.31);
+}
+
+.editorial_header {
+    margin-bottom: 10px;
+}
+
+.editorial_img {
+    max-width: 100%;
+}
+
+.editorial_link {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* ------------------------------------------------
+VIDEO SECTION
+------------------------------------------------ */
+.video_section {
+    display: none;
+}
+
+
+/* ------------------------------------------------
+ARTICLE SECTION
+------------------------------------------------ */
+.article_section {
+    margin: 30px 0;
+    background-color: rgba(34, 56, 178, 0.31);
+}
+
+.article_inner_section {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.article_inner_flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_header {
+    padding-top: 10px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.card:last-child .card_item:last-child {
+    color: blue;
+    border-bottom: none;
+    text-align: right;
+    padding-top: 15px;
+}
+
+.article_img {
+    display: none;
+}
+
+.card {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.card_item {
+    display: block;
+    text-decoration: none;
+    height: 4rem;
+    width: 100%;
+    color: #333333;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(34, 56, 178, 0.31);
+}
+
+
+
+
+/* ------------------------------------------------
+FOOTER
+------------------------------------------------ */
+.page_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25rem;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid black;
+    padding-top: 25px;
+}
+
+.some_img {
+    width: 32px;
+    margin-right: 16px;
+}
+
+.footer_card_header {
+    margin-bottom: 7px;
+}
+
+.footer_card:first-child .footer_card_header {
+    margin-bottom: 16px;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* ------------------------------------------------
+MEDIA QUERY (til pc, ovenfor er mobil)
+------------------------------------------------ */
+
+@media only screen and (min-width: 900px) {
+
+    .search_form {
+        display: flex;
+    }
+
+    .search_field {
+        height: 27px;
+        margin-left: 25px;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        border: 1px solid rgba(51, 51, 51, 0.4);
+    }
+
+    .mobile_search_form {
+        display: none;
+    }
+
+    .guide_section {
+        width: 50%;
+        flex-direction: row;
+        height: 7.5rem;
+        justify-content: space-around;
+    }
+
+    .editorial {
+        flex-direction: row;
+        max-width: 75rem; /*ca. 1200px */
+    }
+
+    .editorial_card {
+        width: 50%;
+        height: 20rem;
+    }
+
+    .editorial_img {
+        object-fit: cover;
+        width: 50%;
+        height: 20rem;
+    }
+
+    .video_section {
+        display: block;
+        margin: 30px 0;
+        padding-bottom: 30px;
+    }
+
+    .video_inner_section {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .video_inner_flexbox {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .video_thumbnail {
+        height: 150px;
+    }
+
+    .video_section_newsletter {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(34, 56, 178, 0.31);
+        height: 13rem;
+        width: 13rem;
+    }
+
+    .newsletter_header {
+        margin-bottom: 5px;
+    }
+
+    .newsletter_link {
+        display: block;
+        margin: 0 auto;
+        padding-top: 10px;
+        text-align: center;
+        height: 40px;
+        width: 140px;
+        text-decoration: none;
+        color: #333333;
+    }
+
+    .article_img {
+        display: block;
+        max-width: 100%;
+        padding-right: 15px;
+        margin-bottom: 9px;
+    }
+
+    .article_inner_flexbox {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+
+    .article_section {
+        padding-bottom: 15px;
+    }
+
+    .card:first-child .card_item {
+        border-bottom: none;
+    }
+
+    .page_footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: 10rem;
+    }
+
+    .footer_card {
+        width: 13rem;
+    }
+}
